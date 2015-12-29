@@ -3,17 +3,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[czech]{babel}
-\usepackage[top=1.5cm, bottom=1.5cm, left=2cm, right=2cm,footskip=0.4cm]{geometry}
+\usepackage[top=1.2cm, bottom=1.2cm, left=1.5cm, right=1.5cm,footskip=0.4cm]{geometry}
 \usepackage{nopageno}
 \usepackage{fancyhdr}
-% \usepackage{showframe}
+\usepackage{hhline}
+%\usepackage{showframe}
 
 \begin{document}
-%%%%%\small
+
+    \renewcommand{\arraystretch}{1.5}
+
+\footnotesize
 
 \title{BSG Cheat Sheet [CZ]}
 \author{Vojtěch Rain Vladyka}
-\date{Verze 1.1}
+\date{Verze 1.2}
 
 \maketitle
 
@@ -56,8 +60,8 @@ Maximální počet karet v ruce je 10.\\
 \begin{enumerate}
 \item sestavení balíčku
 	\begin{enumerate}
- 	\item zahrát karty modifikující balíček (např. Reckless)
-	\item přidat 2 karty z Osudu (Destiny deck)
+ 	\item zahrát karty modifikující balíček (např. \emph{Reckless})
+	\item přidat 2 karty z Osudu (\emph{Destiny deck})
 	\item každý hráč popořadě od aktivního hráče přidá libovolný počet karet
 	\end{enumerate}
 \item vyřešení 
@@ -67,6 +71,11 @@ Maximální počet karet v ruce je 10.\\
 	\item požadované barvy se sečtou a odečtou se zbylé barvy
 	\item je-li výsledek roven nebo vyšší než síla zkoušky, úspěch.
 	\item zahrát karty modifikující výsledek
+	\end{enumerate}
+\item vedlejší účinky
+	\begin{enumerate}
+	\item Bezohledná (\emph{Reckless}) - pokud byla zkouška učiněna Bezohlednou, musí se provést případné důsledky z karet Zrady (\emph{Treachery})
+	\item Pokud byla zkouška označena s důsledky (\emph{Skill Check ability icon}) a byla v ní alespoň jedna takto ozančená karta, musí se provést scénář s důsledky.
 	\end{enumerate}
 \end{enumerate}
 
@@ -78,46 +87,40 @@ Kdykoli jsou na herní ploše Cylonské lodě, je flotila pod útokem.\\
 \\
 \begin{tabular}{ | l | p{5.5cm} | }
 \hline
-Loď & 			Vyhodnocení \\
+\textbf{Loď} & 	\textbf{Vyhodnocení} \\
 \hline
 Raider & 		3-8 zničený \\
 Heavy Raider & 	7-8 zničený \\
-Viper & 		5-7 poškozený \\
+Viper mk.II & 	5-7 poškozený \\
 &				8 zničený \\
-Civilní loď	&	zničená \\ 
-Galactica &		Raiderem 
-					\begin{itemize}
-					\item[-] 8 poškozená 
-					\end{itemize}
-					\\
-&				Basestar 
-					\begin{itemize}
-					\item[-] 4-8 poškozená 
-					\end{itemize}
-\\
+Viper mk.VII &	6-7 poškozený \\
+&				8 zničený \\
+Civilní loď	&	zničená automaticky\\
+Galactica &		\begin{itemize}
+				\item[] Raiderem: 8 poškozená 
+				\item[] Basestar: 4-8 poškozená
+				\end{itemize}
+				\\
 Basestar & 		Viperem 
-					\begin{itemize}
-					\item[-] 8 poškozená 
-					\end{itemize}
-					\\
-&			 	Galacticou 
-					\begin{itemize}
-					\item[-] 5-8 poškozená 
-					\end{itemize}
-					\\
-&				atomovou hlavicí 
-					\begin{itemize}
-					\item[-] 1-2 poškozené 2x 
-					\item[-] 3-6 zničená 
-					\item[-] 7-8 zničená spolu s 3 raidery ve stejné oblasti
-					\end{itemize}
-					\\
+				\begin{itemize}
+				\item[] Viperem: 8 poškozená
+				\item[] Galacticou: 5-8 poškozená 
+				\end{itemize}
+				\\
+Útok atomovou hlavicí & Pro vybranou oblast:
+				\begin{itemize}
+				\item[] 1-2 poškodit basestar 2x 
+				\item[] 3-6 zničit basestar
+				\item[] 7 zničit basestar spolu s 3 raidery
+				\item[] 8 zničit \textbf{všechny} lodě v oblasti
+				\end{itemize}
+				\\
 \hline
 \end{tabular}
 \\\\
 Zničení Galacticy - 6 a víc poškození\\
 Zničení Basestar - 3 a víc poškození\\
-\pagebreak
+%\pagebreak
 \subsection{Aktivace Raiderů}
 Pouze jedna z akcí za tah
 \begin{itemize}
@@ -145,8 +148,10 @@ Let
 \subsection{Aktivace viperů}
 Vždy jen jedna z možností
 \begin{enumerate}
-\item let do sousedního sektoru
+\item let do sousedního sektoru (Viper mk.II)
+\item let do sousedního nebo do následujícího sektoru (Viper mk.VII)
 \item útok
+\item eskortování civilní lodě\footnote{Varianta s Cylonskou flotilou}
 \end{enumerate}
 
 \section{Tah cylona}
